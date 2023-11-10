@@ -12,6 +12,11 @@ public class Point {
 		abscisse = 0;
 		ordonnee = 0;
 	}
+	public Point(Point p)
+	{
+		abscisse = p.x();
+		ordonnee = p.y();
+	}
 
 	public double x()
 	{
@@ -31,5 +36,11 @@ public class Point {
 	{
 		abscisse += dx;
 		ordonnee += dy;
+	}
+
+	public double distance(Point p)
+	{
+		double length = Math.abs(abscisse - p.x()), height = Math.abs(ordonnee - p.y());
+		return Math.sqrt(Math.pow(length, 2) + Math.pow(height, 2));
 	}
 }
