@@ -4,5 +4,7 @@ public class App1
 		Point p1 = new Point(), p2 = new Point(23, 87);
 		p1.display();
 		p2.display();
+		p1.move(-2,8);
+		p1.display();
 	}
 }
